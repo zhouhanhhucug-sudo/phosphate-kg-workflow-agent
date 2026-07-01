@@ -56,11 +56,16 @@ def init_state() -> None:
         "node_types_df": pd.DataFrame(),
         "relation_types_df": pd.DataFrame(),
         "model_plan": "",
-        "nav_page": "项目首页",
+        "current_page": "项目首页",
     }
     for key, value in defaults.items():
         if key not in st.session_state:
             st.session_state[key] = value
+
+
+def go_to_page(page_name: str) -> None:
+    st.session_state.current_page = page_name
+    st.rerun()
 
 
 def apply_theme() -> None:
@@ -200,7 +205,19 @@ def normalize_uploaded_dataframe(df: pd.DataFrame) -> pd.DataFrame:
 
 def sidebar() -> str:
     st.sidebar.title("工作流")
-    page = st.sidebar.radio("模块导航", PAGES, key="nav_page", label_visibility="collapsed")
+    if st.session_state.current_page not in PAGES:
+        st.session_state.current_page = "项目首页"
+
+    selected_page = st.sidebar.radio(
+        "模块导航",
+        PAGES,
+        index=PAGES.index(st.session_state.current_page),
+        label_visibility="collapsed",
+    )
+    if selected_page != st.session_state.current_page:
+        st.session_state.current_page = selected_page
+        st.rerun()
+
     st.sidebar.divider()
     corpus_count = len(st.session_state.corpus_df)
     entity_count = len(st.session_state.entities_df)
@@ -218,7 +235,7 @@ def sidebar() -> str:
     if st.sidebar.button("载入示例数据", use_container_width=True):
         load_example_pipeline()
         st.toast("示例数据已载入")
-    return page
+    return st.session_state.current_page
 
 
 def page_home() -> None:
@@ -249,17 +266,14 @@ def page_home() -> None:
             ]:
                 st.session_state[key] = pd.DataFrame()
             st.session_state.cypher_files = {}
-            st.session_state.nav_page = "语料整理"
-            st.rerun()
+            go_to_page("语料整理")
     with mid:
         if st.button("使用示例数据", use_container_width=True):
             load_example_pipeline()
-            st.session_state.nav_page = "知识抽取"
-            st.rerun()
+            go_to_page("知识抽取")
     with right:
         if st.button("进入语料整理", use_container_width=True):
-            st.session_state.nav_page = "语料整理"
-            st.rerun()
+            go_to_page("语料整理")
 
     if not st.session_state.entities_df.empty:
         st.subheader("当前实体预览")
