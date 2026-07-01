@@ -37,6 +37,22 @@ streamlit run app.py
 
 启动后在浏览器中打开 Streamlit 给出的本地地址。
 
+Windows 本地也可以直接双击：
+
+```text
+run_app.bat
+```
+
+该脚本会优先检查 `http://127.0.0.1:8501` 是否已有服务；如果已有服务，会直接打开浏览器；如果没有服务，会启动 `app.py`。
+
+Streamlit Cloud 部署时入口文件应填写：
+
+```text
+app.py
+```
+
+不要把 `run_app.bat` 作为云端入口文件。
+
 ## 使用流程
 
 1. 打开“语料整理”，粘贴文本或上传 TXT / Markdown / CSV。
