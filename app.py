@@ -88,6 +88,7 @@ def inject_custom_css() -> None:
     st.markdown(
         """
         <style>
+        /* 深色数据驾驶舱 CSS */
         :root {
             --bg: #07111F;
             --bg-soft: #0B1220;
@@ -547,7 +548,7 @@ def info_card(title: str, body_html: str, label: str = "") -> None:
     )
 
 
-def metric_card(label: str, value: object, note: str = "") -> None:
+def render_stat_card(label: str, value: object, note: str = "") -> None:
     st.markdown(
         f"""
         <div class="metric-card">
@@ -560,11 +561,15 @@ def metric_card(label: str, value: object, note: str = "") -> None:
     )
 
 
+def metric_card(label: str, value: object, note: str = "") -> None:
+    render_stat_card(label, value, note)
+
+
 def section_title(title: str) -> None:
     st.markdown(f'<div class="section-title">{esc(title)}</div>', unsafe_allow_html=True)
 
 
-def workflow_html(active_step: str = "") -> str:
+def render_workflow_steps(active_step: str = "") -> str:
     steps = ["文献输入", "语料整理", "知识抽取", "本体校验", "Cypher 生成", "1-3 跳分析", "候选区解释", "GNN 数据准备", "结果导出"]
     parts = ['<div class="workflow-row">']
     for idx, step in enumerate(steps):
@@ -574,6 +579,33 @@ def workflow_html(active_step: str = "") -> str:
             parts.append('<div class="workflow-arrow">→</div>')
     parts.append("</div>")
     return "".join(parts)
+
+
+def workflow_html(active_step: str = "") -> str:
+    return render_workflow_steps(active_step)
+
+
+def render_hero(active_step: str = "文献输入") -> None:
+    left, right = st.columns([1.15, 0.85])
+    with left:
+        st.markdown(
+            f"""
+            <div class="hero-card">
+                <div class="hero-kicker">MINERAL KNOWLEDGE GRAPH PLATFORM</div>
+                <div class="hero-title">{PROJECT_TITLE}</div>
+                <div class="hero-copy">
+                    将地质文献中的成矿知识转化为可分析、可入库、可建模的知识图谱数据。
+                </div>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+    with right:
+        info_card(
+            "当前流程",
+            render_workflow_steps(active_step),
+            "WORKFLOW",
+        )
 
 
 def show_download_buttons(df: pd.DataFrame, stem: str) -> None:
@@ -731,26 +763,7 @@ def sidebar() -> str:
 
 
 def page_home() -> None:
-    left, right = st.columns([1.15, 0.85])
-    with left:
-        st.markdown(
-            f"""
-            <div class="hero-card">
-                <div class="hero-kicker">MINERAL KNOWLEDGE GRAPH PLATFORM</div>
-                <div class="hero-title">{PROJECT_TITLE}</div>
-                <div class="hero-copy">
-                    将地质文献中的成矿知识转化为可分析、可入库、可建模的知识图谱数据。
-                </div>
-            </div>
-            """,
-            unsafe_allow_html=True,
-        )
-    with right:
-        info_card(
-            "当前流程",
-            workflow_html("文献输入"),
-            "WORKFLOW",
-        )
+    render_hero("文献输入")
 
     section_title("数据总览")
     metric_cols = st.columns(5)
@@ -764,10 +777,10 @@ def page_home() -> None:
     ]
     for col, (label, value, note) in zip(metric_cols, metrics):
         with col:
-            metric_card(label, value, note)
+            render_stat_card(label, value, note)
 
     section_title("工作流流程")
-    st.markdown(workflow_html("文献输入"), unsafe_allow_html=True)
+    st.markdown(render_workflow_steps("文献输入"), unsafe_allow_html=True)
 
     section_title("快速开始")
     c1, c2, c3, c4, c5 = st.columns(5)
