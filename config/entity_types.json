@@ -1,0 +1,19 @@
+{
+  "Deposit": "矿床",
+  "Orebody": "矿体",
+  "StratigraphicUnit": "地层单元",
+  "OreBearingHorizon": "含矿层位",
+  "Lithology": "岩性",
+  "TectonicSetting": "构造背景",
+  "SedimentaryEnvironment": "沉积环境",
+  "GeochemicalIndicator": "地球化学指标",
+  "ResourceAttribute": "资源属性",
+  "ProspectingIndicator": "找矿标志",
+  "MetallogenicAge": "成矿时代",
+  "MetallogenicBelt": "成矿区带",
+  "ExplorationEngineering": "勘查工程",
+  "Region": "地区",
+  "Mineral": "矿物",
+  "Element": "元素"
+}
+

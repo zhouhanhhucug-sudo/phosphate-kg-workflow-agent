@@ -1,0 +1,7 @@
+__pycache__/
+.pytest_cache/
+.streamlit/
+.env
+*.pyc
+data/output/*.zip
+

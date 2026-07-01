@@ -1,0 +1,23 @@
+﻿relation_id,subject,subject_type,relation,relation_cn,object,object_type,evidence,paper_id,paragraph_id,direction_check,ontology_check,confidence,need_review
+R-0001,羊场磷矿床,Deposit,located_in,位于/分布于,羊场磷矿床位于滇东北地区,Region,羊场磷矿床位于滇东北地区，矿体主要赋存于寒武系梅树村组含磷岩系中。,P001,P001-001,通过,待校验,0.86,False
+R-0002,羊场磷矿床,Deposit,hosted_by,赋存于,体主要赋存于寒武系梅树村组,StratigraphicUnit,羊场磷矿床位于滇东北地区，矿体主要赋存于寒武系梅树村组含磷岩系中。,P001,P001-001,通过,待校验,0.84,False
+R-0003,羊场磷矿床,Deposit,hosted_by,赋存于,矿体主要赋存于寒武系,StratigraphicUnit,羊场磷矿床位于滇东北地区，矿体主要赋存于寒武系梅树村组含磷岩系中。,P001,P001-001,通过,待校验,0.84,False
+R-0004,羊场磷矿床,Deposit,hosted_by,赋存于,梅树村组含磷岩系,StratigraphicUnit,羊场磷矿床位于滇东北地区，矿体主要赋存于寒武系梅树村组含磷岩系中。,P001,P001-001,通过,待校验,0.84,False
+R-0005,羊场磷矿床,Deposit,hosted_by,赋存于,含磷岩系,OreBearingHorizon,羊场磷矿床位于滇东北地区，矿体主要赋存于寒武系梅树村组含磷岩系中。,P001,P001-001,通过,待校验,0.84,False
+R-0006,羊场磷矿床,Deposit,has_lithology,具有岩性,白云质磷块岩,Lithology,含矿岩性主要为磷块岩、白云质磷块岩和含磷白云岩。,P001,P001-001,通过,待校验,0.86,False
+R-0007,羊场磷矿床,Deposit,has_lithology,具有岩性,含磷白云岩,Lithology,含矿岩性主要为磷块岩、白云质磷块岩和含磷白云岩。,P001,P001-001,通过,待校验,0.86,False
+R-0008,羊场磷矿床,Deposit,has_lithology,具有岩性,磷块岩,Lithology,含矿岩性主要为磷块岩、白云质磷块岩和含磷白云岩。,P001,P001-001,通过,待校验,0.86,False
+R-0009,羊场磷矿床,Deposit,has_lithology,具有岩性,白云岩,Lithology,含矿岩性主要为磷块岩、白云质磷块岩和含磷白云岩。,P001,P001-001,通过,待校验,0.86,False
+R-0010,羊场磷矿床,Deposit,controlled_by,受控于,断裂构造,TectonicSetting,研究区发育背斜和断裂构造，对矿体展布具有一定影响。,P001,P001-001,通过,待校验,0.82,False
+R-0011,羊场磷矿床,Deposit,controlled_by,受控于,断裂,TectonicSetting,研究区发育背斜和断裂构造，对矿体展布具有一定影响。,P001,P001-001,通过,待校验,0.82,False
+R-0012,羊场磷矿床,Deposit,controlled_by,受控于,背斜,TectonicSetting,研究区发育背斜和断裂构造，对矿体展布具有一定影响。,P001,P001-001,通过,待校验,0.82,False
+R-0013,羊场磷矿床,Deposit,developed_in,发育于,断裂构造,TectonicSetting,研究区发育背斜和断裂构造，对矿体展布具有一定影响。,P001,P001-001,需确认,待校验,0.68,True
+R-0014,羊场磷矿床,Deposit,developed_in,发育于,断裂,TectonicSetting,研究区发育背斜和断裂构造，对矿体展布具有一定影响。,P001,P001-001,需确认,待校验,0.68,True
+R-0015,羊场磷矿床,Deposit,developed_in,发育于,背斜,TectonicSetting,研究区发育背斜和断裂构造，对矿体展布具有一定影响。,P001,P001-001,需确认,待校验,0.68,True
+R-0016,P2O5 含量,GeochemicalIndicator,indicates,指示,资源潜力,ProspectingIndicator,P2O5 含量和矿层厚度是评价磷矿资源潜力的重要指标。,P001,P001-001,通过,待校验,0.8,False
+R-0017,矿层厚度,GeochemicalIndicator,indicates,指示,资源潜力,ProspectingIndicator,P2O5 含量和矿层厚度是评价磷矿资源潜力的重要指标。,P001,P001-001,通过,待校验,0.8,False
+R-0018,厚度,GeochemicalIndicator,indicates,指示,资源潜力,ProspectingIndicator,P2O5 含量和矿层厚度是评价磷矿资源潜力的重要指标。,P001,P001-001,通过,待校验,0.8,False
+R-0019,羊场磷矿床,Deposit,has_geochemical_feature,具有地球化学特征,P2O5 含量,GeochemicalIndicator,P2O5 含量和矿层厚度是评价磷矿资源潜力的重要指标。,P001,P001-001,需确认,待校验,0.66,True
+R-0020,羊场磷矿床,Deposit,has_resource,具有资源属性,矿层厚度,ResourceAttribute,P2O5 含量和矿层厚度是评价磷矿资源潜力的重要指标。,P001,P001-001,需确认,待校验,0.66,True
+R-0021,羊场磷矿床,Deposit,has_resource,具有资源属性,厚度,ResourceAttribute,P2O5 含量和矿层厚度是评价磷矿资源潜力的重要指标。,P001,P001-001,需确认,待校验,0.66,True
+R-0022,浅海台地沉积环境,SedimentaryEnvironment,favorable_for,有利于,磷质沉积,ProspectingIndicator,浅海台地沉积环境有利于磷质沉积和矿体形成。,P001,P001-001,通过,待校验,0.84,False

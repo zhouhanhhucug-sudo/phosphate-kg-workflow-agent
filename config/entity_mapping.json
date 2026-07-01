@@ -1,0 +1,22 @@
+{
+  "断裂": "TectonicSetting",
+  "断层": "TectonicSetting",
+  "背斜": "TectonicSetting",
+  "褶皱": "TectonicSetting",
+  "构造": "TectonicSetting",
+  "地层": "StratigraphicUnit",
+  "组": "StratigraphicUnit",
+  "段": "StratigraphicUnit",
+  "系": "StratigraphicUnit",
+  "含矿层位": "OreBearingHorizon",
+  "含矿层": "OreBearingHorizon",
+  "矿床类型": "Deposit",
+  "成矿区带": "MetallogenicBelt",
+  "地层时代": "MetallogenicAge",
+  "勘查工程": "ExplorationEngineering",
+  "岩石": "Lithology",
+  "岩性": "Lithology",
+  "沉积相": "SedimentaryEnvironment",
+  "地球化学": "GeochemicalIndicator"
+}
+

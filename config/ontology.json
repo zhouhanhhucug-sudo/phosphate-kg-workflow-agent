@@ -1,0 +1,10 @@
+{
+  "name": "沉积型磷矿知识图谱本体",
+  "version": "0.1.0",
+  "description": "用于沉积型磷矿知识抽取、Neo4j 入库和 GNN 数据准备的轻量本体配置。",
+  "entity_types_file": "entity_types.json",
+  "relation_types_file": "relation_types.json",
+  "entity_mapping_file": "entity_mapping.json",
+  "relation_mapping_file": "relation_mapping.json"
+}
+

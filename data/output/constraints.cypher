@@ -1,0 +1,13 @@
+CREATE CONSTRAINT entity_name_unique IF NOT EXISTS FOR (n:Entity) REQUIRE n.name IS UNIQUE;
+CREATE INDEX entity_type_index IF NOT EXISTS FOR (n:Entity) ON (n.type);
+CREATE INDEX deposit_name_index IF NOT EXISTS FOR (n:Deposit) ON (n.name);
+CREATE INDEX geochemicalindicator_name_index IF NOT EXISTS FOR (n:GeochemicalIndicator) ON (n.name);
+CREATE INDEX lithology_name_index IF NOT EXISTS FOR (n:Lithology) ON (n.name);
+CREATE INDEX orebearinghorizon_name_index IF NOT EXISTS FOR (n:OreBearingHorizon) ON (n.name);
+CREATE INDEX orebody_name_index IF NOT EXISTS FOR (n:Orebody) ON (n.name);
+CREATE INDEX prospectingindicator_name_index IF NOT EXISTS FOR (n:ProspectingIndicator) ON (n.name);
+CREATE INDEX region_name_index IF NOT EXISTS FOR (n:Region) ON (n.name);
+CREATE INDEX resourceattribute_name_index IF NOT EXISTS FOR (n:ResourceAttribute) ON (n.name);
+CREATE INDEX sedimentaryenvironment_name_index IF NOT EXISTS FOR (n:SedimentaryEnvironment) ON (n.name);
+CREATE INDEX stratigraphicunit_name_index IF NOT EXISTS FOR (n:StratigraphicUnit) ON (n.name);
+CREATE INDEX tectonicsetting_name_index IF NOT EXISTS FOR (n:TectonicSetting) ON (n.name);

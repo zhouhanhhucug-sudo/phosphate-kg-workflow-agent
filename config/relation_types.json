@@ -1,0 +1,23 @@
+{
+  "located_in": "位于 / 分布于 / 赋存于",
+  "contains": "包含 / 由……组成",
+  "hosted_by": "赋存于",
+  "controlled_by": "受……控制",
+  "associated_with": "与……有关",
+  "formed_in": "形成于",
+  "developed_in": "发育于",
+  "has_lithology": "具有岩性",
+  "has_indicator": "具有找矿标志",
+  "has_geochemical_feature": "具有地球化学特征",
+  "has_resource": "具有资源属性",
+  "belongs_to": "属于",
+  "adjacent_to": "邻近",
+  "overlies": "覆于",
+  "underlies": "伏于",
+  "indicates": "指示",
+  "favorable_for": "有利于",
+  "restricts": "制约",
+  "derived_from": "来源于",
+  "same_as": "同义实体"
+}
+

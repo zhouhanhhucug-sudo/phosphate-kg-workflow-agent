@@ -1,0 +1,12 @@
+﻿node_type,node_type_cn,count
+Deposit,矿床,1
+GeochemicalIndicator,地球化学指标,1
+Lithology,岩性,4
+OreBearingHorizon,含矿层位,2
+Orebody,矿体,1
+ProspectingIndicator,找矿标志,1
+Region,地区,1
+ResourceAttribute,资源属性,3
+SedimentaryEnvironment,沉积环境,1
+StratigraphicUnit,地层单元,3
+TectonicSetting,构造背景,3

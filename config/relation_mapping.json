@@ -1,0 +1,21 @@
+{
+  "包括": "contains",
+  "包含": "contains",
+  "由……组成": "contains",
+  "局部夹": "contains",
+  "夹持于": "located_in",
+  "分布于": "located_in",
+  "展布于": "located_in",
+  "位于": "located_in",
+  "赋存于": "hosted_by",
+  "产于": "hosted_by",
+  "形成": "formed_in",
+  "发育": "developed_in",
+  "属于": "belongs_to",
+  "受控于": "controlled_by",
+  "控制": "controlled_by",
+  "有利于": "favorable_for",
+  "指示": "indicates",
+  "类型为": "attribute"
+}
+

@@ -1,0 +1,3 @@
+﻿attribute_id,entity_name,attribute_name,attribute_value,unit,evidence,paper_id,paragraph_id,confidence,need_review
+A-P001-001-001,羊场磷矿床,P2O5 含量,文中提及，未给出具体数值,,P2O5 含量和矿层厚度是评价磷矿资源潜力的重要指标。,P001,P001-001,0.62,True
+A-P001-001-002,羊场磷矿床,矿层厚度,文中提及，未给出具体数值,,P2O5 含量和矿层厚度是评价磷矿资源潜力的重要指标。,P001,P001-001,0.62,True
